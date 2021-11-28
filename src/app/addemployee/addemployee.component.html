@@ -1,0 +1,29 @@
+<div class="container">
+    <nav class="nav" style="background-color:black">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="/add">Add Employee</a>
+        <a class="nav-link" href="/view">View Employee</a>
+    </nav>
+</div>
+<br>
+<div class="container">
+    <form [formGroup]="form">
+        <div class="form-group">
+            Name  <input type="text" name="empName" class="form-control" formControlName="empName">
+        </div>
+        <div class="form-group">
+            Age  <input type="number" name="empAge" class="form-control" formControlName="empAge">
+        </div>
+        <div class="form-group">
+            Salary  <input type="number" name="empSalary" class="form-control" formControlName="empSalary">
+        </div>
+        <div class="form-group">
+            Phone Number   <input type="number" name="empPhoneNumber" class="form-control" formControlName="empPhoneNumber">
+        </div>
+        <div class="form-group">
+            Address  <textarea class="form-control" formControlName="empAddress"></textarea> 
+        </div>
+        
+        <button type="submit" style="text-align: center" class="btn btn-primary" (click)="Create()">Create</button>
+    </form>
+</div>

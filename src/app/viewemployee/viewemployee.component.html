@@ -1,0 +1,39 @@
+<div class="container">
+    <nav class="nav" style="background-color:black">
+      <a class="nav-link active" aria-current="page" href="#">Home</a>
+      <a class="nav-link" href="/add">Add Employee</a>
+      <a class="nav-link" href="/view">View Employee</a>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="card my-5">
+        <div class="card-body">
+          <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Salary</th>
+                <th>PhoneNumber</th>
+                <th>Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let emp of employee">
+                <td>{{emp.empID}}</td>
+                <td>{{ emp.empName }}</td>
+                <td>{{ emp.empAge }}</td>
+                <td>{{ emp.empSalary }}</td>
+                <td>{{ emp.empPhoneNumber }}</td>
+                <td>{{ emp.empAddress }}</td>
+                <td><button class="btn btn-secondary" routerLink="/update/{{emp.empID}}">Update</button></td>
+                <td><button class="btn btn-secondary" (click)="Delete(emp)">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div> 
+  </div> 
+  
+  
